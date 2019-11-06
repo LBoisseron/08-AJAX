@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AJAX et PHP</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+<body>
+    <!---------------------------------------------------------------------------------------------------------------------------
+        1. mettre en place un formulaire Bootstrap permettant de s'inscire à une newsletter :
+            - email
+            - prenom et nom
+
+        2. réaliser un script PHP/SQL permettant après vérification des données POST, l'insertion des données dans une BDD
+            - vérification de l'email et de son format
+            - vérifier que l'email n'est pas déjà inscrit
+            - les champs prenom et nom peuvent être null.
+            
+        2. effectuer une validation jQuery du formulaire :
+            - vérification de l'email et de son format
+            - prénom et nom obligatoire
+    ----------------------------------------------------------------------------------------------------------------------------->
+    
+    <div class="container">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1 class="display-4">Formulaire d'inscription</h1>
+                <p class="lead">Pour recevoir notre newsletter, veuillez remplir les champs suivants.</p>
+            </div>
+        </div>
+
+        <form id="newsletter" method="POST" action="newsletter.php">
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email" class="form-control" id="email" name="email" value="" placeholder="email@exemple.com">
+            </div>
+            <div class="form-row">
+                <div class="col">
+                    <label>Prénom</label>
+                    <input type="text" class="form-control" id="prenom" name="prenom" value="" placeholder="Le Prénom">
+                </div>
+                <div class="col">
+                    <label>Nom</label>
+                    <input type="text" class="form-control" id="nom" name="nom" value="" placeholder="Le Nom">
+                </div>
+            </div>
+            <br><hr><br>
+            <button type="submit" class="btn btn-primary btn-block">Envoyer la demande</button>
+        </form>
+        
+    </div>
+
+<!--jQuery CDN-->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="crossorigin="anonymous"></script>
+
+<!--MON SCRIPT JS-->
+<script src="./assets/js/newsletter.js"></script>
+
+
+</body>
+</html>
