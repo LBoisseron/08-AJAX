@@ -42,10 +42,10 @@ if (!empty($_POST)) {
                     $query->execute();
                 }
             } else {
-                $erreurs['isMailInvalid'] = true;
+                $erreurs['isEmailInvalid'] = true;
             }
         } else {
-            $erreurs['isMailEmpty'] = true;
+            $erreurs['isEmailEmpty'] = true;
         }
 
     // une fois notre traitement terminé, on va faire un retour à l'application

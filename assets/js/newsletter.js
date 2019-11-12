@@ -43,7 +43,7 @@ $(function() {
                 // Sinon, il y a eu un problème, nous allons vérifier d'ou viens le soucis
 
                 // A. Email déjà présent dans la base
-                if ( resultat.errors.isEmailInBDD ) {
+                if ( resultat.erreurs.isEmailInBDD ) {
 
                     $('#newsletter').prepend(`
                         <div class="alert alert-danger">
@@ -85,7 +85,7 @@ $(function() {
                 }
 
                 // C. Email n'a pas été rempli
-                if ( resultat.errors.isEmailEmpty ) {
+                if ( resultat.erreurs.isEmailEmpty ) {
 
                     $('#newsletter').prepend(`
                         <div class="alert alert-danger">
